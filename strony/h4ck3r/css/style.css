@@ -1,0 +1,274 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #000402;
+  overflow: hidden;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: lighter;
+  color: #13d303;
+  z-index: 102;
+  white-space: nowrap;
+  animation: popup 1s 2.3s both, popup2 0.5s 5.1s both, popup3 0.5s 7.1s both;
+}
+.popup .animp {
+  animation: animp 0.5s 5.6s both;
+}
+.popup .animp .logo-text {
+  font-size: 16px;
+  color: white;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  animation: logo-text 1s 6.1s both;
+}
+.popup .animp span {
+  margin: 0 4px;
+}
+.popup .animp #letter-h {
+  animation: lh 0.2s 0.75s both;
+}
+.popup .animp #letter-4 {
+  animation: l4 0.2s 1s both;
+}
+.popup .animp #letter-c {
+  animation: lc 1s 0.5s both;
+}
+.popup .animp #letter-k {
+  animation: lk 0.2s 0.3s 4 both;
+}
+.popup .animp #letter-3 {
+  animation: l3 0.2s 1.1s both;
+}
+.popup .animp #letter-r {
+  animation: lr 0.2s 1s both;
+}
+.popup .line {
+  width: auto;
+  height: 10px;
+  background-color: #13d303;
+  animation: line 2.5s 1.5s both, line2 0.3s 4.3s both;
+}
+
+.darken {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 3, 1, 0.9);
+  width: 100%;
+  height: 100%;
+}
+
+#main-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 2;
+}
+
+.h-img {
+  opacity: 0;
+  animation: h-img 1s 7.6s both;
+}
+
+.h-text {
+  font-size: 17px;
+  opacity: 0;
+  animation: h-text 1s 7.8s both;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px 15px;
+}
+.h-text h1 {
+  color: #13d303;
+  font-size: 58px;
+}
+.h-text .btn-outline-green {
+  color: #13d303;
+  border-color: #13d303;
+}
+.h-text .btn-outline-green:hover {
+  background-color: #13d303;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@keyframes lh {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes l4 {
+  0% {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes lc {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes lk {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes l3 {
+  0% {
+    transform: translatey(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translatey(0px);
+    opacity: 1;
+  }
+}
+@keyframes lr {
+  0% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes line {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 115px;
+  }
+  55% {
+    width: 115px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes line2 {
+  0% {
+    height: 10px;
+  }
+  100% {
+    height: 3px;
+  }
+}
+@keyframes popup {
+  0% {
+    top: 50%;
+    width: auto;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    top: 0%;
+    width: auto;
+    transform: translate(-50%, 0%);
+  }
+  100% {
+    top: 0%;
+    width: 100%;
+    transform: translate(-50%, 0%);
+  }
+}
+@keyframes popup2 {
+  0% {
+    font-size: 50px;
+  }
+  100% {
+    font-size: 40px;
+  }
+}
+@keyframes popup3 {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes animp {
+  0% {
+    padding: 0 0;
+  }
+  100% {
+    padding: 10px 0;
+  }
+}
+@keyframes logo-text {
+  0% {
+    font-size: 16px;
+    margin-top: -12px;
+    width: auto;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    font-size: 16px;
+    margin-top: -12px;
+    width: auto;
+    height: 20px;
+    opacity: 1;
+  }
+}
+@keyframes h-img {
+  0% {
+    transform: translate(-100px, 100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.4;
+  }
+}
+@keyframes h-text {
+  0% {
+    transform: translate(-100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

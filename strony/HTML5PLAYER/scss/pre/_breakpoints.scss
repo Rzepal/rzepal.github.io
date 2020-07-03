@@ -1,0 +1,18 @@
+// ---Breakpointy---
+
+@media (max-width: $small) {}
+
+@media (min-width: $small) {}
+
+@media (min-width: $medium) {
+  //Przykład
+  //@include body--md;
+}
+
+@media (min-width: $large) {}
+
+@media (min-width: $extra-large) {
+  .player {
+    width: 1200px;
+  }
+}

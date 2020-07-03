@@ -1,0 +1,17 @@
+// ---Import ustawienia breakpointów---
+@import "variables/variables-breakpoints";
+@import "variables/colors";
+@import "pre/reset";
+@import "pre/pre";
+
+//Przykład
+body {
+  background: rgb(2, 2, 2);
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@import "partials/player";
+
+// ---Import breakpointów---
+@import "pre/breakpoints";

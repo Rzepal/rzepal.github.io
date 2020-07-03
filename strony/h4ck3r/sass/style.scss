@@ -1,0 +1,115 @@
+// ---Import ustawienia breakpointów---
+@import "variables/colors";
+@import "variables/variables-breakpoints";
+@import "partials/reset";
+@import "partials/pre";
+
+
+body{
+   background-color: #000402;
+  overflow: hidden;
+}
+.popup{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 50px;
+  font-weight: lighter;
+  color: $text-green;
+  z-index: 102;
+  white-space: nowrap;
+  animation: popup 1s 2.3s both,popup2 .5s 5.1s both,popup3 .5s 7.1s both;
+  .animp {
+    animation: animp .5s 5.6s both;
+    .logo-text{
+      font-size: 16px;
+      //margin-top: -12px;
+      color: white;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      animation: logo-text 1s 6.1s both;
+    }
+    span {
+      margin: 0 4px;
+    }
+
+    #letter-h {
+      animation: lh .2s 0.75s both;
+    }
+
+    #letter-4 {
+      animation: l4 .2s 1s both;
+    }
+
+    #letter-c {
+      animation: lc 1s 0.5s both;
+    }
+
+    #letter-k {
+      animation: lk .2s .3s 4 both;
+    }
+
+    #letter-3 {
+      animation: l3 .2s 1.1s both;
+    }
+
+    #letter-r {
+      animation: lr .2s 1s both;
+    }
+  }
+  .line{
+    width: auto;
+    height: 10px;
+    background-color: $text-green;
+    animation: line 2.5s 1.5s both,line2 .3s 4.3s both;
+  }
+
+}
+.darken{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 3, 1,.9);
+  width: 100%;
+  height: 100%;
+}
+#main-video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 2;
+}
+.h-img{
+  opacity: 0;
+  animation: h-img 1s 7.6s both;
+}
+.h-text{
+  h1{
+    color: $text-green;
+    font-size: 58px;
+  }
+  .btn-outline-green {
+    color: $text-green;
+    border-color: $text-green;
+    &:hover{
+      background-color: $text-green;
+      color: black;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+  font-size: 17px;
+  opacity: 0;
+  animation: h-text 1s 7.8s both;
+  background-color: rgba(0,0,0,.3);
+  padding: 20px 15px;
+}
+@import "partials/keyframes";
+// ---Import breakpointów---
+@import "partials/breakpoints";
+

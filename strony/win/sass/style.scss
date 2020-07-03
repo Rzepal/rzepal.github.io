@@ -1,0 +1,237 @@
+// ---Import ustawienia breakpointów---
+@import "variables/variables-breakpoints";
+@import "partials/reset";
+@import "partials/pre";
+//Przykład
+
+body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)), url(../img/tlo.jpg) no-repeat fixed center /cover;
+  overflow: hidden;
+}
+
+$okno-width: 1000px;
+$okno-height: 600px;
+$pasek-height: 25px;
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  .programy{
+    width: 300px;
+    background-color: rgba(0, 0, 0, .8);
+    border: 1px solid #c2c4b6;
+    z-index: 5000;
+    .prog-item{
+      text-align: center;
+      padding: 3px;
+      color: white;
+      border-top: 1px solid rgba(20, 20, 255, 0.5);
+    }
+    .dodawanieOkna{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      padding: 5px;
+    }
+  }
+  .okno {
+    position: absolute;
+    width: $okno-width;
+    height: $okno-height;
+    background-color: rgba(0, 0, 0, .8);
+    padding: 10px;
+    padding-top: 0;
+    overflow: hidden;
+    .pasek {
+      height: $pasek-height;
+      color: #e2e3e1;
+      font-size: 16px;
+      padding: 18px 0;
+      i {
+        padding: 3px 14px;
+        margin: 0 1px;
+        width: 44px;
+        text-align: center;
+        //width: 44px;
+        &:hover{
+          background-color: #1d2fd9;
+        }
+      }
+      i.fa-times{
+        background-color: #2e3439;
+        &:hover{
+          background-color: #d9534f;
+        }
+      }
+    }
+
+    .tresc {
+      height: calc(100% - 36px);
+      background-color: #e2e3e1;
+    }
+  }
+
+  .bottom-bar {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3500;
+
+    .start {
+      width: 60px;
+      height: 50px;
+      background-color: rgba(0, 0, 0, 0.7);
+      font-size: 33px;
+      color: white;
+
+      &:hover {
+        i {
+          color: black !important;
+        }
+
+        background-color: #7d7d7d;
+      }
+    }
+
+    .start-bar {
+      width: calc(100% - 60px);
+      height: 50px;
+      background-color: rgba(0, 0, 0, 0.65);
+
+      .icons {
+        height: 100%;
+
+        .icon {
+          width: 60px;
+          height: 100%;
+          margin: 0 3px;
+
+          &:hover {
+            background: linear-gradient(90deg, rgba(20, 20, 255, 1) 0px, rgba(255, 255, 255, 0) 2px, rgba(255, 255, 255, 0) 3px, rgba(255, 255, 255, 0) 58px, rgba(255, 255, 255, 0) 58px, rgba(20, 20, 255, 1));
+          }
+
+          .menu-item {
+            font-size: 33px;
+            color: #dadada;
+          }
+        }
+
+      }
+
+    }
+  }
+
+  .start-menu {
+    font-family: Arial;
+    width: 450px;
+    background-color: rgba(0, 0, 0, .8);
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    z-index: 4000 !important;
+
+    .right-sideSM {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 13px;
+
+      .right-side-item {
+        padding: 5px 4px;
+        margin: 3px 0;
+        height: 27px;
+
+        &:hover {
+          border: 1px solid white;
+          padding: 4px 3px;
+          background-color: #323538;
+        }
+      }
+    }
+
+    .wszystkie {
+      color: black;
+      border: 1px solid white;
+
+      &:hover {
+        background-color: #aaadb2;
+        border: 1px solid #b1b4b8;
+      }
+    }
+
+    .left-side-item {
+      color: black;
+      border: 1px solid white;
+
+      &:hover {
+        background-color: #e3e6eb;
+        border: 1px solid #a1a4a8;
+      }
+    }
+
+    .wysz {
+      background-color: #e3e6eb;
+
+      .wysz-in {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+
+        &::after {
+          font-family: 'Font Awesome 5 Free';
+          content: '\f002';
+          font-weight: 900;
+          font-size: 12px;
+          position: absolute;
+          right: 6px;
+          top: 5px;
+        }
+
+        input {
+          width: 100%;
+          height: 20px;
+          border: 1px solid black;
+          font-size: 12px;
+          padding-left: 5px;
+        }
+      }
+
+    }
+
+    .power-menu {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.8);
+
+      .power-options {
+        &:hover {
+          background: linear-gradient(180deg, rgb(19, 19, 19), rgb(87, 87, 87));
+          color: rgba(255, 255, 255, 1);
+        }
+
+        .power-zam {
+          display: block;
+          width: auto;
+          padding: 1px 5px;
+          margin: 1px;
+          border: 1px solid rgba(255, 255, 255, 0.7);
+        }
+
+        .power-st {
+          display: block;
+          width: auto;
+          padding: 1px 8px;
+          margin: 1px;
+          border: 1px solid rgba(255, 255, 255, 0.7);
+        }
+      }
+    }
+
+  }
+}
+
+
+// ---Import breakpointów---
+@import "partials/breakpoints";
+

@@ -1,0 +1,221 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.c {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.85))), url("../img/tlo.jpg") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../img/tlo.jpg") no-repeat center center/cover;
+  color: #00ff22;
+  height: 100vh;
+  width: 100%;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.main .board {
+  border: 3px inset #63f87c;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: relative;
+  overflow: hidden;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-width: 200px;
+  border-radius: 20px;
+}
+
+.main .board .boxes .box {
+  width: 35px;
+  height: 35px;
+  background-color: #320b85;
+  border: 1px outset black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bolder;
+  text-align: center;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.main .board .end {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #00ff22;
+  font-size: 40px;
+  font-weight: bold;
+  -webkit-animation: end 1s 1s ease-in-out forwards;
+          animation: end 1s 1s ease-in-out forwards;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .board .end .resetButton {
+  border: 1px solid #00ff22;
+  padding: 4px 10px;
+  font-size: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main .board .end .resetButton:hover {
+  background-color: #00ff22;
+  color: #000308;
+}
+
+.main .stats {
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 15px;
+  background-color: #00ff22;
+  border: 3px inset #63f87c;
+  position: relative;
+  padding: 0 10px 0;
+  text-align: center;
+  height: 45px;
+  width: 566px;
+}
+
+.main .stats .timer {
+  width: 200px;
+  text-align: center;
+  background-color: #1b004d;
+  border: 3px inset #63f87c;
+  font-size: 40px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.85);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.85);
+}
+
+.main .stats .stats-item {
+  padding: 5px;
+  color: #131313;
+  width: 180px;
+}
+
+.main .stats .stats-item .mines,
+.main .stats .stats-item .clicks {
+  font-size: 23px;
+  font-weight: bolder;
+}
+
+.main .stats .stats-item .mines:first-child,
+.main .stats .stats-item .clicks:first-child {
+  color: white;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.main .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.main .options .option {
+  border: 1px solid #00ff22;
+  padding: 4px 10px;
+  font-size: 26px;
+  margin: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main .options .option:first-child {
+  margin-left: 0;
+}
+
+.main .options .option:last-child {
+  margin-right: 0;
+}
+
+.main .options .option:hover {
+  background-color: #00ff22;
+  color: #000308;
+}
+
+@-webkit-keyframes end {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes end {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */

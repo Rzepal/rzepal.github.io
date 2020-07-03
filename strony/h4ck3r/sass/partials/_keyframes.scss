@@ -1,0 +1,159 @@
+@keyframes lh{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes l4{
+  0%{
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  100%{
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes lc{
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(-0px);
+    opacity: 1;
+  }
+}
+@keyframes lk {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes l3{
+  0%{
+    transform: translatey(30px);
+    opacity: 0;
+  }
+  100%{
+    transform: translatey(0px);
+    opacity: 1;
+  }
+}
+@keyframes lr{
+  0%{
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes line{
+  0%{
+    width: 0;
+  }
+  30%{
+    width: 115px;
+  }
+  55%{
+    width: 115px;
+  }
+  100%{
+    width: 100%;
+  }
+}
+@keyframes line2{
+  0%{
+    height: 10px;
+  }
+  100%{
+    height: 3px;
+  }
+}
+@keyframes popup{
+  0%{
+    top:50%;
+    width: auto;
+    transform: translate(-50%,-50%);
+  }
+  50%{
+    top: 0%;
+    width: auto;
+    transform: translate(-50%,0%);
+  }
+  100%{
+    top: 0%;
+    width: 100%;
+    transform: translate(-50%,0%);
+  }
+}
+@keyframes popup2{
+  0%{
+    font-size: 50px;
+  }
+  100%{
+    font-size: 40px;
+  }
+}
+@keyframes popup3{
+  0%{
+    background-color: rgba(0,0,0,0);
+  }
+  100%{
+    background-color: rgba(0,0,0,.3);
+  }
+}
+@keyframes animp{
+  0%{
+    padding: 0 0;
+  }
+  100%{
+    padding: 10px 0;
+  }
+}
+@keyframes logo-text {
+  0%{
+    font-size: 16px;
+    margin-top: -12px;
+    width: auto;
+    height: 0;
+    opacity: 0;
+  }
+  100%{
+    font-size: 16px;
+    margin-top: -12px;
+    width: auto;
+    height: 20px;
+    opacity: 1;
+  }
+
+}
+@keyframes h-img {
+   0%{
+     transform: translate(-100px,100px);
+     opacity: 0;
+   }
+   100%{
+     transform: translate(0,0);
+     opacity: .4;
+   }
+ }
+@keyframes h-text {
+  0%{
+    transform: translate(-100%,0);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+}

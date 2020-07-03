@@ -1,0 +1,346 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+body {
+  background: #020202;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.textPlayer {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.player {
+  position: relative;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 0px 3px #0f2d59;
+  -moz-box-shadow: 0px 0px 0px 3px #0f2d59;
+  box-shadow: 0px 0px 0px 3px #225aaf;
+  border-radius: 2px;
+}
+.player .subOut {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+}
+.player #display {
+  color: white;
+  font-size: 29px;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding: 0 5px;
+  user-select: none;
+}
+.player .translateButton {
+  float: left;
+  font-size: 12px;
+  background-color: #0f2d59;
+  color: white;
+  padding: 0 5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  height: 100%;
+  cursor: pointer;
+}
+.player .translateInfo {
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 23px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(9, 40, 90, 0.6);
+  padding: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  transition: 0.5s ease-in-out all;
+  min-width: 34px;
+}
+.player .translateInfo:after {
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(9, 40, 90, 0.6);
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+}
+.player .sub {
+  position: relative;
+  cursor: pointer;
+}
+.player video {
+  width: 100%;
+  max-height: 100%;
+}
+.player .controls {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: absolute;
+  bottom: 0 !important;
+  left: 0;
+  z-index: 100;
+}
+.player .controls .bottom-controls {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 4px;
+}
+.player .controls .bottom-controls .left-controls {
+  width: 50%;
+  height: 100%;
+}
+.player .controls .bottom-controls .right-controls {
+  width: 50%;
+  height: 100%;
+}
+.player .controls .bottom-controls .right-controls .volume {
+  width: 60%;
+  max-width: 200px;
+  position: relative;
+}
+.player .controls .bottom-controls .right-controls .volume .volumeBar {
+  width: 100%;
+  height: 6px;
+  border: 1px solid #043380;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.player .controls .bottom-controls .right-controls .volume .volumeBar .volumeBarset {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  transform-origin: 0;
+  height: 100%;
+  border-radius: 40px;
+  background: linear-gradient(#022153, #03193f);
+}
+.player .controls .bottom-controls .right-controls .volume .volumetxt {
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  transform: translate(-50%, -50%);
+  color: #d8d8d8;
+  font-size: 10px;
+  font-weight: lighter;
+}
+.player .controls .bottom-controls .center-controls {
+  width: 25%;
+  height: 100%;
+}
+.player .controls .bottom-controls .center-controls .center-top-controls .leftarrows,
+.player .controls .bottom-controls .center-controls .center-top-controls .rightarrows {
+  width: 80px;
+  height: 30px;
+  border: 2px solid #022153;
+  border-radius: 100px;
+}
+.player .controls .bottom-controls .center-controls .center-top-controls .leftarrows img,
+.player .controls .bottom-controls .center-controls .center-top-controls .rightarrows img {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.player .controls .bottom-controls .center-controls .center-top-controls .leftarrows {
+  position: relative;
+  left: 30px;
+}
+.player .controls .bottom-controls .center-controls .center-top-controls .rightarrows {
+  position: relative;
+  right: 30px;
+}
+.player .controls .bottom-controls .center-controls .center-top-controls .playPause {
+  width: 80px;
+  height: 40px;
+  background: linear-gradient(#022153, #03193f);
+  border: 1px solid #043380;
+  border-radius: 30px;
+  z-index: 100;
+}
+.player .controls .top-controls {
+  display: block;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.player .controls .top-controls .Bar {
+  position: relative;
+}
+.player .controls .top-controls .Bar .time {
+  color: white;
+  font-size: 12px;
+  position: relative;
+  top: 2px;
+}
+.player .controls .top-controls .Bar .progressBar {
+  width: 100%;
+  height: 9px;
+  border-top: 1px solid #043380;
+  border-bottom: 1px solid #043380;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.player .controls .top-controls .Bar .progressBar .whiteCircle {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 9px;
+  height: 9px;
+  background-color: #c7ddff;
+}
+.player .controls .top-controls .Bar .progressBar .playbackBar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  transform-origin: 0;
+  height: 100%;
+  background: linear-gradient(#022153, #031535);
+  border-radius: 30px;
+  z-index: 2;
+}
+.player .controls .top-controls .Bar .progressBar .loadedBar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  transform-origin: 0;
+  height: 100%;
+  border-radius: 30px;
+  background-color: rgba(32, 50, 78, 0.171);
+}
+.player .tooltip {
+  position: absolute !important;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  padding: 6px 8px;
+  background-color: rgba(12, 12, 12, 0.95);
+  color: #f9f9f9;
+  text-align: center;
+  font-size: 14px;
+  z-index: 120;
+  border: 1px solid #043380;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+.player .tooltip:after {
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(12, 12, 12, 0.95);
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+}
+
+.playPause,
+.moveTimelineLeft,
+.moveTimelineRight,
+.moveVolumeLeft,
+.moveVolumeRight,
+.volumeBar,
+.progressBar,
+.fullScreen,
+.popUp,
+.moveToNextSubtitle,
+.moveToPreviousSubtitle {
+  cursor: pointer;
+}
+
+.moveToNextSubtitle,
+.moveToPreviousSubtitle {
+  box-sizing: content-box;
+  padding-left: 15px;
+  padding-right: 8px;
+}
+.moveToNextSubtitle:hover,
+.moveToPreviousSubtitle:hover {
+  background-color: rgba(2, 33, 83, 0.4);
+}
+
+.moveTimelineRight,
+.moveTimelineLeft {
+  box-sizing: content-box;
+  padding-right: 10px;
+  padding-left: 5px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.moveTimelineRight:hover,
+.moveTimelineLeft:hover {
+  background-color: rgba(2, 33, 83, 0.4);
+}
+
+.moveVolumeLeft:hover,
+.moveVolumeRight:hover,
+.fullScreen:hover,
+.popUp:hover {
+  transform: translateY(-1px);
+}
+
+@media (min-width: 1200px) {
+  .player {
+    width: 1200px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

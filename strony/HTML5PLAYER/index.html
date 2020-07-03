@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>HTML5 Player</title>
+    <!-- Meta tagi -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="c" style="flex-direction: column;">
+    <h1 class="textPlayer"><span style="color:rgb(46, 119, 255)">HTML5</span> PLAYER BY<span
+            style="font-size: 15px;color:rgb(112, 157, 241)">RZEPA</span></h1>
+    <div></div>
+    <div class=" player c">
+        <video>
+            <source src="2.mp4" type="video/mp4">
+            Nie wspierany typ pliku , zmień swoją przeglądarkę :)
+            <track default src="2.vtt" kind="subtitles" srclang="en" label="English Captions" id="track1">
+        </video>
+        <div class="controls c" style="flex-direction: column;">
+            <div class="top-controls c">
+                <div class="Bar c noselect">
+                    <div class="currentTime time noselect" style="margin-left: 16px;margin-right: 16px;"
+                        draggable="false">0:00:00</div>
+                    <div class="progressBar c">
+                        <div class="playbackBar">
+                            <div class="circ"></div>
+                        </div>
+                        <div class="loadedBar"></div>
+                    </div>
+                    <div class="totalTime time noselect" style="margin-left: 16px;margin-right: 16px;">0:00:00</div>
+                </div>
+            </div>
+            <div class="bottom-controls c">
+                <div class="left-controls c noselect" style="justify-content: flex-start;">
+                    <img src="img/icons/options.png" width="22px" style="margin-left: 16px;margin-right: 16px;"
+                        draggable="false">
+                    <img src="img/icons/subtitles.png" width="22px" draggable="false">
+                </div>
+                <div class="center-controls c" style="flex-direction: column;">
+                    <div class="center-top-controls c noselect">
+                        <div class="leftarrows c" style="justify-content: flex-start;">
+                            <img src="img/icons/arrow2.png" width="13px" style="transform: rotate(180deg);"
+                                draggable="false" class="moveTimelineLeft">
+                            <img src="img/icons/arrow.png" width="10px" style="transform: rotate(180deg);"
+                                draggable="false" class="moveToPreviousSubtitle">
+                        </div>
+                        <div class="playPause c">
+                            <img src=" img/icons/play.png" width="20px" draggable="false">
+                        </div>
+                        <div class="rightarrows c" style="justify-content: flex-end;">
+                            <img src="img/icons/arrow.png" width="10px" draggable="false" class="moveToNextSubtitle">
+                            <img src="img/icons/arrow2.png" width="13px" draggable="false" class="moveTimelineRight">
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="right-controls c noselect" style="justify-content: flex-end">
+                    <div class="volume c">
+                        <img src="img/icons/sounddown.png" class="moveVolumeLeft" style="margin-right: 8px;" alt=""
+                            width="12px" draggable="false">
+                        <div class="volumeBar">
+                            <div class="volumeBarset"></div>
+                        </div>
+                        <div class="volumetxt c">
+                            <div class="currentVolume" style="display: none;">75%</div>
+                        </div>
+                        <img src="img/icons/soundup.png" alt="" width="14px" class="moveVolumeRight"
+                            style="margin-left: 8px" draggable="false">
+                    </div>
+                    <div class="c"><img src="img/icons/popup.png" class="popUp" alt="" width="25px"
+                            style="margin-left: 16px;"><img src="img/icons/fullscreen.png" class="fullScreen"
+                            width="20px" draggable="false" style="margin-left: 16px;margin-right: 16px;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subOut c" style="display: none;">
+            <div id="display"></div>
+            <div class="translateButton c">TŁUMACZ</div>
+        </div>
+        <div class="translateInfo" style="display: none;">
+
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

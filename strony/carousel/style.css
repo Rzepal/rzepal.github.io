@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    transition: .7s all ease-in-out;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, .3);
+}

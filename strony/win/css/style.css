@@ -1,0 +1,210 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../img/tlo.jpg) no-repeat fixed center/cover;
+  overflow: hidden;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.main .programy {
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #c2c4b6;
+  z-index: 5000;
+}
+.main .programy .prog-item {
+  text-align: center;
+  padding: 3px;
+  color: white;
+  border-top: 1px solid rgba(20, 20, 255, 0.5);
+}
+.main .programy .dodawanieOkna {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 5px;
+}
+.main .okno {
+  position: absolute;
+  width: 1000px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  padding-top: 0;
+  overflow: hidden;
+}
+.main .okno .pasek {
+  height: 25px;
+  color: #e2e3e1;
+  font-size: 16px;
+  padding: 18px 0;
+}
+.main .okno .pasek i {
+  padding: 3px 14px;
+  margin: 0 1px;
+  width: 44px;
+  text-align: center;
+}
+.main .okno .pasek i:hover {
+  background-color: #1d2fd9;
+}
+.main .okno .pasek i.fa-times {
+  background-color: #2e3439;
+}
+.main .okno .pasek i.fa-times:hover {
+  background-color: #d9534f;
+}
+.main .okno .tresc {
+  height: calc(100% - 36px);
+  background-color: #e2e3e1;
+}
+.main .bottom-bar {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3500;
+}
+.main .bottom-bar .start {
+  width: 60px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 33px;
+  color: white;
+}
+.main .bottom-bar .start:hover {
+  background-color: #7d7d7d;
+}
+.main .bottom-bar .start:hover i {
+  color: black !important;
+}
+.main .bottom-bar .start-bar {
+  width: calc(100% - 60px);
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.main .bottom-bar .start-bar .icons {
+  height: 100%;
+}
+.main .bottom-bar .start-bar .icons .icon {
+  width: 60px;
+  height: 100%;
+  margin: 0 3px;
+}
+.main .bottom-bar .start-bar .icons .icon:hover {
+  background: linear-gradient(90deg, #1414ff 0px, rgba(255, 255, 255, 0) 2px, rgba(255, 255, 255, 0) 3px, rgba(255, 255, 255, 0) 58px, rgba(255, 255, 255, 0) 58px, #1414ff);
+}
+.main .bottom-bar .start-bar .icons .icon .menu-item {
+  font-size: 33px;
+  color: #dadada;
+}
+.main .start-menu {
+  font-family: Arial;
+  width: 450px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  z-index: 4000 !important;
+}
+.main .start-menu .right-sideSM {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+}
+.main .start-menu .right-sideSM .right-side-item {
+  padding: 5px 4px;
+  margin: 3px 0;
+  height: 27px;
+}
+.main .start-menu .right-sideSM .right-side-item:hover {
+  border: 1px solid white;
+  padding: 4px 3px;
+  background-color: #323538;
+}
+.main .start-menu .wszystkie {
+  color: black;
+  border: 1px solid white;
+}
+.main .start-menu .wszystkie:hover {
+  background-color: #aaadb2;
+  border: 1px solid #b1b4b8;
+}
+.main .start-menu .left-side-item {
+  color: black;
+  border: 1px solid white;
+}
+.main .start-menu .left-side-item:hover {
+  background-color: #e3e6eb;
+  border: 1px solid #a1a4a8;
+}
+.main .start-menu .wysz {
+  background-color: #e3e6eb;
+}
+.main .start-menu .wysz .wysz-in {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.main .start-menu .wysz .wysz-in::after {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 900;
+  font-size: 12px;
+  position: absolute;
+  right: 6px;
+  top: 5px;
+}
+.main .start-menu .wysz .wysz-in input {
+  width: 100%;
+  height: 20px;
+  border: 1px solid black;
+  font-size: 12px;
+  padding-left: 5px;
+}
+.main .start-menu .power-menu {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.main .start-menu .power-menu .power-options:hover {
+  background: linear-gradient(180deg, #131313, #575757);
+  color: white;
+}
+.main .start-menu .power-menu .power-options .power-zam {
+  display: block;
+  width: auto;
+  padding: 1px 5px;
+  margin: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+.main .start-menu .power-menu .power-options .power-st {
+  display: block;
+  width: auto;
+  padding: 1px 8px;
+  margin: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/*# sourceMappingURL=style.css.map */

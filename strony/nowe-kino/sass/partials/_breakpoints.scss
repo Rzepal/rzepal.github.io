@@ -1,0 +1,73 @@
+// ---Breakpointy---
+
+@media (min-width: 0){
+
+}
+@media (min-width: $small) {
+
+}
+@media (min-width: $medium) {
+  //Przykład
+  //@include body--md;
+}
+@media (min-width: $large) {
+  .collapse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px !important;
+    ul {
+      li {
+        font-size: 15px;
+        border: 0 !important;
+        a {
+          padding-left: 15px !important;
+          padding-right: 15px !important;
+
+          &:hover {
+            @if $theme==1{
+              background-color: #262626 !important;
+            }@else{
+              background-color: #d6d6d6 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  nav {
+    padding: 0px !important;
+  }
+  .dropdown1{
+    .dropdown-menu {
+      width: 600px;
+      .dropdown-item{
+        font-size: 15px;
+      }
+    }
+  }
+}
+@media (min-width: $extra-large) {
+  ul {
+    li {
+      font-size: 17px;
+    }
+    a {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+}
+
+}
+@media (min-width: 1100px){
+    .film {
+      width: 200px !important;
+      height: 300px !important;
+    }
+}
+@media (min-width: 1921px){
+  .film {
+    width: 300px !important;
+    height: 450px !important;
+  }
+}

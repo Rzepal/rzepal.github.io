@@ -1,0 +1,494 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+.main1 {
+  width: 100%;
+  background: linear-gradient(rgba(216, 216, 216, 0.9), rgba(216, 216, 216, 0.9)), url("../img/tlo.jpg") repeat center center/cover;
+  padding-bottom: 200px;
+}
+
+.main2 {
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(#9b9b9b, #9b9b9b) repeat center center/cover;
+}
+
+nav {
+  background-color: white;
+  margin: 0 !important;
+  padding: 10px !important;
+}
+nav .line1, nav .line2, nav .line3 {
+  width: 23px;
+  height: 3px;
+  margin: 5px;
+  transition: all 0.4s;
+}
+nav .change .line1 {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+nav .change .line2 {
+  opacity: 0;
+}
+nav .change .line3 {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+nav .bg-lightt {
+  background-color: #4b4b4b !important;
+}
+
+.logo {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 68px;
+}
+
+.collapse {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.collapse .navbar-brand {
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out all;
+}
+.collapse .navbar-brand:hover img {
+  filter: contrast(110%);
+  transform: scale(1.05);
+}
+.collapse .navbar-brand img {
+  position: relative;
+  top: 5px;
+  width: 185px;
+}
+.collapse ul {
+  height: 100% !important;
+  padding: 0 !important;
+}
+.collapse ul li {
+  height: 100%;
+  margin: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-top: 1px solid #ebebeb;
+}
+.collapse ul li:first-child {
+  border-top: 0;
+}
+.collapse ul li:last-child {
+  border-bottom: 1px solid #ebebeb;
+}
+.collapse ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: black !important;
+}
+.collapse ul li a:hover {
+  background-color: white;
+}
+
+.wyszukaj {
+  width: 200px;
+}
+.wyszukaj input {
+  background-color: rgba(255, 255, 255, 0.77);
+  color: black !important;
+  border: 1px solid rgba(45, 45, 45, 0.27);
+}
+.wyszukaj button {
+  background: linear-gradient(#000104, #05143a);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white !important;
+}
+.wyszukaj button:hover {
+  background: linear-gradient(#00030f, #091d50);
+}
+
+.nav-tabs .nav-item {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.nav-tabs .nav-item .nav-link {
+  color: #000000;
+  border: 0;
+  border-bottom: 3px solid transparent;
+}
+.nav-tabs .nav-item .nav-link.active {
+  background-color: transparent;
+}
+.nav-tabs .nav-itemP .nav-link {
+  border-bottom: 3px solid transparent;
+}
+.nav-tabs .nav-itemP .nav-link.active {
+  background-color: transparent;
+  border-bottom: 3px solid #0044ff;
+}
+
+.out2 {
+  position: relative;
+  overflow: hidden;
+  margin: 2px;
+}
+.out2:nth-child(even) .film {
+  background: url("../img/1.jpg") no-repeat center center/cover;
+}
+.out2:nth-child(odd) .film {
+  background: url("../img/2.jpg") no-repeat center center/cover;
+}
+.out2 .film {
+  opacity: 0;
+  width: 300px;
+  height: 450px;
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.outer-tab {
+  width: 100% !important;
+  padding: 10px;
+}
+.outer-tab .tab {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.outer-tab .out {
+  position: relative;
+  overflow: hidden;
+  margin: 2px;
+}
+.outer-tab .out .roz {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  transition: all linear 0.2s;
+  border: 1px solid #000000;
+}
+.outer-tab .out .rat {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  width: 90px;
+  height: 50px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 10px;
+  align-items: center;
+  background-color: white;
+  color: #333;
+  border: 2px groove #b4deff;
+  font-size: 14px;
+  transition: all linear 0.2s;
+  -webkit-box-shadow: -2px 0px 5px 0px rgba(0, 0, 255, 0.25);
+  -moz-box-shadow: -2px 0px 5px 0px rgba(0, 0, 255, 0.25);
+  box-shadow: -2px 0px 5px 0px rgba(0, 0, 255, 0.25);
+}
+.outer-tab .out:nth-child(1) .film {
+  background: url("../img/1.jpg") no-repeat center center/cover;
+}
+.outer-tab .out:nth-child(2) .film {
+  background: url("../img/2.jpg") no-repeat center center/cover;
+}
+.outer-tab .out:nth-child(3) .film {
+  background: url("../img/3.jpg") no-repeat center center/cover;
+}
+.outer-tab .out:nth-child(4) .film {
+  background: url("../img/4.jpg") no-repeat center center/cover;
+}
+.outer-tab .out:nth-child(5) .film {
+  background: url("../img/5.jpg") no-repeat center center/cover;
+}
+.outer-tab .out:nth-child(6) .film {
+  background: url("../img/6.jpg") no-repeat center center/cover;
+}
+.outer-tab .out:nth-child(7) .film {
+  background: url("../img/7.jpg") no-repeat center center/cover;
+}
+.outer-tab .out:nth-child(8) .film {
+  background: url("../img/8.jpg") no-repeat center center/cover;
+}
+.outer-tab .out:nth-child(9) .film {
+  background: url("../img/9.jpg") no-repeat center center/cover;
+}
+.outer-tab .out:nth-child(10) .film {
+  background: url("../img/10.jpg") no-repeat center center/cover;
+}
+.outer-tab .out:nth-child(11) .film {
+  background: url("../img/11.jpg") no-repeat center center/cover;
+}
+.outer-tab .out:nth-child(12) .film {
+  background: url("../img/12.jpg") no-repeat center center/cover;
+}
+.outer-tab .out:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out all;
+}
+.outer-tab .out:hover .roz {
+  transform: translate(15px, 14px);
+}
+.outer-tab .out:hover .rat {
+  transform: translateX(200px);
+}
+.outer-tab .out .film {
+  width: 300px;
+  height: 450px;
+  margin: 15px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.8s;
+}
+.outer-tab .out .film:hover {
+  overflow: hidden;
+  cursor: pointer;
+}
+.outer-tab .out .film:hover::before {
+  top: 0;
+}
+.outer-tab .out .film::before {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  user-select: none;
+  transition: top 0.3s, opacity 0.4s;
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.outer-tab .out .film .playO {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+.outer-tab .out .film .playO .play {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(mediumblue, #3232ff);
+  color: white;
+  display: flex;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+}
+.outer-tab .out .film .playO .play i {
+  font-size: 30px;
+}
+.outer-tab .out .film .playO span {
+  position: absolute;
+  bottom: -100%;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  padding: 5px;
+}
+
+.top {
+  background-color: #f3f4f5;
+  border: 1px solid #c1c1c1;
+  padding: 10px;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  margin-bottom: 10px;
+  transition: 0.1s ease-in-out all;
+}
+.top:hover {
+  transform: translate(-12px);
+  cursor: pointer;
+}
+.top:nth-child(2) .ik {
+  background: url("../img/m2.jpg") no-repeat center center/cover;
+}
+.top:nth-child(3) .ik {
+  background: url("../img/m3.jpg") no-repeat center center/cover;
+}
+.top:nth-child(4) .ik {
+  background: url("../img/m4.jpg") no-repeat center center/cover;
+}
+.top:nth-child(5) .ik {
+  background: url("../img/m5.jpg") no-repeat center center/cover;
+}
+.top:nth-child(6) .ik {
+  background: url("../img/m6.jpg") no-repeat center center/cover;
+}
+.top .ik {
+  height: 100px !important;
+  width: 100px !important;
+  border-radius: 50%;
+  border: 1px solid #c1c1c1;
+}
+
+footer .logoF {
+  filter: grayscale(100%);
+  height: 100px;
+  opacity: 0.6;
+}
+footer .f1 {
+  background-color: #d6d6d6;
+  color: black;
+}
+footer .f2 {
+  background-color: #f9f9f9;
+  color: #1c1c1c;
+}
+
+.wraper {
+  min-height: calc(100vh - 41px);
+  width: 100%;
+}
+
+.najpopularniejsze {
+  color: #000000;
+}
+
+.outer-tab {
+  background-color: #f3f4f5;
+  border-bottom: 1px solid #c1c1c1;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid #3a3a3b !important;
+}
+
+.right {
+  border-left: 1px solid #f5f5f5;
+  border-top: 1px solid #ffffff;
+}
+
+.tytul-out {
+  color: #595959;
+}
+.tytul-out .tytul {
+  color: #2c70f3;
+  font-size: 19px;
+}
+
+.dropdown-toggle::after {
+  transition: transform 0.15s linear;
+}
+
+.show.dropdown .dropdown-toggle::after {
+  transform: translateY(3px);
+}
+
+.dropdown1 .dropdown-menu {
+  margin-top: 0;
+  background-color: #e4e4e4;
+  border: 1px solid #f3f3f3;
+  border-radius: 0;
+  width: 100%;
+  padding: 5px 5px;
+}
+.dropdown1 .dropdown-menu .dropdown-item {
+  padding: 8px 0;
+  font-size: 13px;
+}
+
+.line {
+  position: absolute;
+  height: 3px;
+  border-radius: 5px;
+  transition: 0.6s all ease-in-out;
+  transform: translateY(-2px);
+  background-color: #0044ff;
+}
+
+@media (min-width: 992px) {
+  .collapse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px !important;
+  }
+  .collapse ul li {
+    font-size: 15px;
+    border: 0 !important;
+  }
+  .collapse ul li a {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .collapse ul li a:hover {
+    background-color: #d6d6d6 !important;
+  }
+
+  nav {
+    padding: 0px !important;
+  }
+
+  .dropdown1 .dropdown-menu {
+    width: 600px;
+  }
+  .dropdown1 .dropdown-menu .dropdown-item {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  ul li {
+    font-size: 17px;
+  }
+  ul a {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+@media (min-width: 1100px) {
+  .film {
+    width: 200px !important;
+    height: 300px !important;
+  }
+}
+@media (min-width: 1921px) {
+  .film {
+    width: 300px !important;
+    height: 450px !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

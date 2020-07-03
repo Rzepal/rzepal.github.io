@@ -1,0 +1,116 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)), url(tlo.jpg) no-repeat fixed center /cover;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.nav-menu {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+    padding: 30px;
+    transition: all .7s;
+}
+
+
+.custom-navbar {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+    padding: 5px 30px;
+}
+
+
+.menu-item {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: white;
+    transition: color .5s;
+}
+
+.img {
+    box-shadow: 5px 5px 50px #000000;
+}
+
+.menu-item:hover {
+    color: #65ffbe;
+}
+
+.nav-active {
+    color: #65ffbe;
+}
+
+.line1,
+.line2,
+.line3 {
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+    transition: all .4s;
+}
+
+.change .line1 {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.change .line2 {
+    opacity: 0;
+}
+
+.change .line3 {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.brand {
+    color: #78ff9c;
+}
+
+.banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.przesuniecie {
+    animation: baner .8s ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+.przesuniecie2 {
+    animation: baner .8s .2s ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+.pojawianie {
+    animation: baner2 .8s 1s ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+.pojawianie2 {
+    animation: baner2 1.5s 1.2s ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes baner {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+@keyframes baner2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
