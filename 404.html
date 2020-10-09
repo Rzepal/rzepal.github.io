@@ -1,41 +1,122 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="shortcut icon" href="/img/prof.jpg" />
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/style.css" />
-    <title>*Strona Główna*</title>
-  </head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Condiment&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="img/fmask.png" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: linear-gradient(rgba(10, 11, 20, 0.96), rgba(10, 11, 20, 0.96)), url(img/tlo.jpg) no-repeat center center / cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        font-family: 'Roboto Mono', monospace;
+      }
+      .c {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      span {
+        font-size: 125px;
+        color: #3d11dd;
+        transform: translateY(30px);
+        font-family: 'Condiment', cursive;
+      }
+      span:first-child {
+        transform: translate(-50px, 30px);
+      }
+      span:last-child {
+        transform: translate(20px, 30px);
+      }
+      .o {
+        width: 125px;
+        height: 125px;
+        background: #5b36e2 url(img/fmask.png) no-repeat center/cover;
+        border-radius: 50%;
+        position: relative;
+      }
+      .o::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border: 5px dashed #3d11dd;
+        -webkit-animation: circle-border 12s linear infinite;
+        animation: circle-border 12s linear infinite;
+      }
+      .bottom-text {
+        font-size: 20px;
+        color: #9987d8;
+        transform: translateY(-0px);
+      }
+      @-webkit-keyframes circle-border {
+        0% {
+          -webkit-transform: translate(-50%, -50%) rotate(0);
+          transform: translate(-50%, -50%) rotate(0);
+        }
+        100% {
+          -webkit-transform: translate(-50%, -50%) rotate(360deg);
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
 
+      @keyframes circle-border {
+        0% {
+          -webkit-transform: translate(-50%, -50%) rotate(0);
+          transform: translate(-50%, -50%) rotate(0);
+        }
+        100% {
+          -webkit-transform: translate(-50%, -50%) rotate(360deg);
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+      @media (min-width: 1100px) {
+        .o {
+          width: 300px;
+          height: 300px;
+        }
+        .o::after {
+          height: 350px;
+          width: 350px;
+          border: 10px dashed #3d11dd;
+        }
+        span {
+          font-size: 500px;
+        }
+        .bottom-text {
+          font-size: 40px;
+          transform: translateY(-150px);
+        }
+        span:last-child {
+          transform: translate(0, 30px);
+        }
+        span:first-child {
+          transform: translate(-60px, 30px);
+        }
+      }
+    </style>
+    <title>404</title>
+  </head>
   <body>
-    <header class="d-flex justify-content-center align-items-center flex-column">
-      <h1 style="color: #2ee822">404 NOT FOUND</h1>
-      <span>:)</span>
-    </header>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/style.js"></script>
+    <div class="c">
+      <span>4</span>
+      <div class="o"></div>
+      <span>4</span>
+    </div>
+    <div class="bottom-text">NIE ZNALEZIONO STRONY</div>
   </body>
 </html>
